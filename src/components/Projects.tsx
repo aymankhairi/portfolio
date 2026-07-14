@@ -1,5 +1,6 @@
 "use client";
 
+import { assetPath } from "@/lib/path";
 import { motion, Variants } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
@@ -11,7 +12,7 @@ const projects = [
     description:
       "Modern fashion e-commerce platform designed with a responsive shopping experience, product presentation, and clean user interface.",
     tech: ["Next.js", "React", "CSS"],
-    image: "/projects/vive.png",
+    image: assetPath("/projects/vive.png"),
     demo: "https://aymankhairi.github.io/vive/",
     github: "https://github.com/aymankhairi/vive",
   },
@@ -21,7 +22,7 @@ const projects = [
       "Professional e-commerce website developed for a London-based footwear and clothing company.",
     type: "Client Project",
     tech: ["HTML5", "CSS3", "BootStrap", "JavaScript"],
-    image: "/projects/gim.jpg",
+    image: assetPath("/projects/gim.jpg"),
     demo: "https://gim-uemoa-ltd.uk/",
     github: "https://gim-uemoa-ltd.uk/",
   },
@@ -31,7 +32,7 @@ const projects = [
       "Business website created for a financial services company, showcasing planning, forecasting, and investment services.",
     type: "Client Project",
     tech: ["HTML5", "CSS3", "BootStrap", "JavaScript"],
-    image: "/projects/aims.jpg",
+    image: assetPath("/projects/aims.jpg"),
     demo: "https://aimsfinance.uk/",
     github: "https://aimsfinance.uk/",
   },
@@ -41,7 +42,7 @@ const projects = [
       "IT services website focused on cybersecurity, cloud solutions, infrastructure management, and analytics.",
     type: "Client Project",
     tech: ["HTML5", "CSS3", "BootStrap", "JavaScript"],
-    image: "/projects/eos.jpg",
+    image: assetPath("/projects/eos.jpg"),
     demo: "https://eoscoinvst.uk/",
     github: "https://eoscoinvst.uk/",
   },
@@ -50,7 +51,7 @@ const projects = [
     description:
       "Professional restaurant website focused on customer experience, menu presentation, and business visibility.",
     tech: ["Next.js", "Tailwind CSS", "React"],
-    image: "/projects/restaurant.png",
+    image: assetPath("/projects/restaurant.png"),
     demo: "https://aymankhairi.github.io/restaurants/",
     github: "https://github.com/aymankhairi/restaurants",
   },
@@ -59,7 +60,7 @@ const projects = [
     description:
       "Modern service website helping customers discover services and request information easily.",
     tech: ["Next.js", "Tailwind CSS", "React"],
-    image: "/projects/cleaning.png",
+    image: assetPath("/projects/cleaning.png"),
     demo: "https://aymankhairi.github.io/sparkclean/",
     github: "https://github.com/aymankhairi/sparkclean",
   },
@@ -77,7 +78,7 @@ const projects = [
       "CSS3",
       "Bootstrap",
     ],
-    image: "/projects/barber.png",
+    image: assetPath("/projects/barber.png"),
     demo: "https://aymankhairi.github.io/newlook",
     github: "https://aymankhairi.github.io/newlook",
   },
@@ -94,7 +95,7 @@ const projects = [
       "Firebase",
       "Firebase Cloud Messaging",
     ],
-    image: "/projects/arraf.png",
+    image: assetPath("/projects/arraf.png"),
     // demo: "#",
     // github: "#",
   },
