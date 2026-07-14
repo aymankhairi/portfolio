@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
@@ -8,293 +8,391 @@ import { FaGithub } from "react-icons/fa";
 const projects = [
   {
     title: "Vive E-Commerce",
-
     description:
       "Modern fashion e-commerce platform designed with a responsive shopping experience, product presentation, and clean user interface.",
-
-    tech: ["HTML", "CSS", "JavaScript"],
-
+    tech: ["Next.js", "React", "CSS"],
     image: "/projects/vive.png",
-
     demo: "https://aymankhairi.github.io/vive/",
-
-    github: "https://github.com/aymankhairi",
+    github: "https://github.com/aymankhairi/vive",
   },
   {
     title: "GIM UEMOA LTD Website",
-
     description:
-      "Professional e-commerce website developed for a London-based footwear and clothing company. Focused on presenting products with a modern responsive interface.",
-
+      "Professional e-commerce website developed for a London-based footwear and clothing company.",
     type: "Client Project",
-
-    tech: ["HTML", "CSS", "JavaScript"],
-
+    tech: ["HTML5", "CSS3", "BootStrap", "JavaScript"],
     image: "/projects/gim.jpg",
-
     demo: "https://gim-uemoa-ltd.uk/",
-
-    github: "#",
+    github: "https://gim-uemoa-ltd.uk/",
   },
   {
     title: "AIMS Finance Services",
-
     description:
-      "Business website created for a financial services company, showcasing strategic planning, budgeting, forecasting, investment analysis, and risk management services.",
-
+      "Business website created for a financial services company, showcasing planning, forecasting, and investment services.",
     type: "Client Project",
-
-    tech: ["HTML", "CSS", "JavaScript"],
-
+    tech: ["HTML5", "CSS3", "BootStrap", "JavaScript"],
     image: "/projects/aims.jpg",
-
     demo: "https://aimsfinance.uk/",
-
-    github: "#",
+    github: "https://aimsfinance.uk/",
   },
   {
     title: "EOS COINVST LTD",
-
     description:
-      "IT services website developed for a London company providing cybersecurity, cloud computing, infrastructure management, and data analytics solutions.",
-
+      "IT services website focused on cybersecurity, cloud solutions, infrastructure management, and analytics.",
     type: "Client Project",
-
-    tech: ["HTML", "CSS", "JavaScript"],
-
+    tech: ["HTML5", "CSS3", "BootStrap", "JavaScript"],
     image: "/projects/eos.jpg",
-
     demo: "https://eoscoinvst.uk/",
-
-    github: "#",
+    github: "https://eoscoinvst.uk/",
   },
   {
     title: "Restaurant Website",
-
     description:
       "Professional restaurant website focused on customer experience, menu presentation, and business visibility.",
-
-    tech: ["Next.js", "Tailwind CSS"],
-
+    tech: ["Next.js", "Tailwind CSS", "React"],
     image: "/projects/restaurant.png",
-
-    demo: "#",
-
-    github: "#",
+    demo: "https://aymankhairi.github.io/restaurants/",
+    github: "https://github.com/aymankhairi/restaurants",
   },
-
   {
     title: "Cleaning Company Website",
-
     description:
       "Modern service website helping customers discover services and request information easily.",
-
-    tech: ["Next.js", "Tailwind CSS"],
-
+    tech: ["Next.js", "Tailwind CSS", "React"],
     image: "/projects/cleaning.png",
-
-    demo: "#",
-
-    github: "#",
+    demo: "https://aymankhairi.github.io/sparkclean/",
+    github: "https://github.com/aymankhairi/sparkclean",
   },
-
   {
     title: "Barbershop Management System",
-
     description:
       "Full-stack appointment management system with booking workflow, service management, and database integration.",
-
-    tech: ["C#", "ASP.NET Core", "SQL Server"],
-
+    type: "Client Project",
+    tech: [
+      "C#",
+      "ASP.NET Core",
+      "SQL Server",
+      "Entity Framework Core",
+      "HTML5",
+      "CSS3",
+      "Bootstrap",
+    ],
     image: "/projects/barber.png",
-
-    demo: "#",
-
-    github: "#",
+    demo: "https://aymankhairi.github.io/newlook",
+    github: "https://aymankhairi.github.io/newlook",
   },
-
   {
     title: "Arraf Mobile Application",
-
+    type: "Client Project",
     description:
       "Multi-role mobile application with admin, moderator, and user systems with backend integration.",
-
-    tech: ["Flutter", "PHP", "SQL Server", "Firebase"],
-
+    tech: [
+      "Flutter",
+      "Dart",
+      "PHP",
+      "SQL Server",
+      "Firebase",
+      "Firebase Cloud Messaging",
+    ],
     image: "/projects/arraf.png",
-
-    demo: "#",
-
-    github: "#",
+    // demo: "#",
+    // github: "#",
   },
 ];
 
 export default function Projects() {
+  const container: Variants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const card: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.55,
+      },
+    },
+  };
+
   return (
     <section
       id="projects"
       className="
-py-32
-px-6
-"
+      relative
+      py-32
+      px-6
+      overflow-hidden
+      scroll-mt-24
+      
+    "
     >
-      <h2
-        className="
-text-4xl
-font-bold
-text-center
-mb-16
-"
-      >
-        Featured Projects
-      </h2>
-
+      {/* Luxury Background Glow */}
       <div
         className="
-max-w-7xl
-mx-auto
-grid
-md:grid-cols-2
-lg:grid-cols-3
-gap-8
-"
+        absolute
+        top-0
+        left-1/2
+        -translate-x-1/2
+        w-[900px]
+        h-[900px]
+        bg-cyan-500/5
+        blur-[220px]
+        rounded-full
+        pointer-events-none
+      "
+      />
+
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.05 }}
+        className="max-w-7xl mx-auto relative z-10"
       >
-        {projects.map((project, index) => (
-          <motion.div
-            key={project.title}
-            initial={{
-              opacity: 0,
-              y: 40,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 0.5,
-              delay: index * 0.1,
-            }}
-            viewport={{
-              once: true,
-            }}
+        {/* Header */}
+        <motion.div variants={card} className="text-center mb-20">
+          <span
             className="
-group
-overflow-hidden
-rounded-2xl
-border
-border-white/10
-bg-white/5
-backdrop-blur-xl
-hover:border-cyan-400/50
-transition
-"
+            uppercase
+            tracking-[5px]
+            text-cyan-400
+            text-sm
+            font-medium
+          "
           >
-            <div
+            Portfolio
+          </span>
+
+          <h2
+            className="
+            mt-4
+            text-4xl
+            md:text-6xl
+            font-bold
+          "
+          >
+            Featured Projects
+          </h2>
+
+          <p
+            className="
+            mt-6
+            text-gray-400
+            max-w-2xl
+            mx-auto
+            text-lg
+          "
+          >
+            Selected work showcasing modern web applications, business
+            platforms, enterprise systems, and mobile solutions.
+          </p>
+        </motion.div>
+
+        {/* Projects Grid */}
+        <div
+          className="
+          grid
+          md:grid-cols-2
+          lg:grid-cols-3
+          gap-8
+        "
+        >
+          {projects.map((project) => (
+            <motion.div
+              key={project.title}
+              variants={card}
+              whileHover={{
+                y: -10,
+              }}
               className="
-relative
-h-56
-overflow-hidden
-"
+              group
+              relative
+              overflow-hidden
+              rounded-3xl
+              border
+              border-white/10
+              bg-white/[0.03]
+              backdrop-blur-xl
+              transition-all
+              duration-300
+              hover:border-cyan-400/30
+              hover:shadow-[0_20px_60px_rgba(34,211,238,0.12)]
+            "
             >
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="
-object-cover
-group-hover:scale-110
-transition
-duration-500
+              {/* Image */}
+              <div className="relative h-64 bg-black/20 flex items-center justify-center p-3">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={800}
+                  height={500}
+                  className="
+  max-w-full
+  max-h-full
+  object-contain
+  transition-transform
+  duration-700
+  ease-out
+  group-hover:scale-105
 "
-              />
-            </div>
+                />
+                {/* Overlay */}
+                <div
+                  className="
+                  absolute
+                  inset-0
+                  bg-gradient-to-t
+                  from-black/90
+                  via-black/20
+                  to-transparent
+                "
+                />
+                {/* Glow */}
+                <div
+                  className="
+                  absolute
+                  inset-0
+                  bg-cyan-500/0
+                  group-hover:bg-cyan-500/10
+                  transition-all
+                  duration-500
+                "
+                />
+              </div>
 
-            <div className="p-6">
-              <h3
-                className="
-text-2xl
-font-bold
-"
-              >
-                {project.title}
-              </h3>
-
-              <p
-                className="
-mt-4
-text-gray-400
-leading-7
-"
-              >
-                {project.description}
-              </p>
-
-              <div
-                className="
-flex
-flex-wrap
-gap-2
-mt-5
-"
-              >
-                {project.tech.map((item) => (
-                  <span
-                    key={item}
+              {/* Content */}
+              <div className="p-7">
+                {project.type && (
+                  <div
                     className="
-px-3
-py-1
-rounded-full
-text-sm
-bg-black
-border
-border-white/10
-"
+                    inline-flex
+                    px-3
+                    py-1
+                    mb-4
+                    rounded-full
+                    text-xs
+                    uppercase
+                    tracking-wider
+                    bg-cyan-500/10
+                    text-cyan-400
+                    border
+                    border-cyan-500/20
+                  "
                   >
-                    {item}
-                  </span>
-                ))}
-              </div>
+                    {project.type}
+                  </div>
+                )}
 
-              <div
-                className="
-flex
-gap-4
-mt-6
-"
-              >
-                <a
-                  href={project.demo}
-                  target="_blank"
+                <h3
                   className="
-flex
-items-center
-gap-2
-text-cyan-400
-"
+                  text-2xl
+                  font-bold
+                  mb-4
+                "
                 >
-                  <ExternalLink size={18} />
-                  Demo
-                </a>
+                  {project.title}
+                </h3>
 
-                <a
-                  href={project.github}
-                  target="_blank"
+                <p
                   className="
-flex
-items-center
-gap-2
-text-gray-300
-"
+                  text-gray-400
+                  leading-7
+                  mb-6
+                "
                 >
-                  <FaGithub size={18} />
-                  Code
-                </a>
+                  {project.description}
+                </p>
+
+                {/* Tech */}
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="
+                      px-3
+                      py-1.5
+                      rounded-full
+                      text-xs
+                      border
+                      border-white/10
+                      bg-black/20
+                      text-gray-300
+                      transition-all
+                      duration-300
+                      hover:border-cyan-400/40
+                      hover:text-white
+                    "
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Actions */}
+                <div className="flex items-center gap-4">
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                    flex
+                    items-center
+                    gap-2
+                    px-4
+                    py-2
+                    rounded-xl
+                    bg-cyan-500/10
+                    border
+                    border-cyan-500/20
+                    text-cyan-400
+                    hover:bg-cyan-500/20
+                    transition-all
+                    duration-300
+                  "
+                  >
+                    <ExternalLink size={16} />
+                    Demo
+                  </a>
+
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                    flex
+                    items-center
+                    gap-2
+                    px-4
+                    py-2
+                    rounded-xl
+                    border
+                    border-white/10
+                    text-gray-300
+                    hover:border-white/20
+                    hover:text-white
+                    transition-all
+                    duration-300
+                  "
+                  >
+                    <FaGithub size={16} />
+                    Code
+                  </a>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 }
