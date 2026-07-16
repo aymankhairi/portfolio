@@ -1,0 +1,156 @@
+import { assetPath } from "@/lib/path";
+export const projects = [
+  {
+    slug: "viveecommerce",
+    title: "Vive E-Commerce",
+    description:
+      "Modern fashion e-commerce platform designed with a responsive shopping experience, product presentation, and clean user interface.",
+    tech: ["Next.js", "React", "CSS"],
+    image: assetPath("/projects/vive.png"),
+    gallery: [
+      assetPath("/projects/vive/home.png"),
+      assetPath("/projects/vive/products.png"),
+      assetPath("/projects/vive/mobile.png"),
+    ],
+    demo: "https://aymankhairi.github.io/vive/",
+    github: "https://github.com/aymankhairi/vive",
+  },
+  {
+    slug: "gimuemaoltd",
+    title: "GIM UEMOA LTD",
+    description:
+      "Professional e-commerce website developed for a London-based footwear and clothing company.",
+
+    type: "Client Project",
+    tech: ["HTML5", "CSS3", "BootStrap", "JavaScript"],
+    image: assetPath("/projects/gim.jpg"),
+    gallery: [
+      assetPath("/projects/gim/home.png"),
+      assetPath("/projects/gim/products.png"),
+      assetPath("/projects/gim/mobile.png"),
+    ],
+    demo: "https://gim-uemoa-ltd.uk/",
+    github: "https://gim-uemoa-ltd.uk/",
+  },
+  {
+    slug: "aimsfinanceservice",
+    title: "AIMS Finance Services",
+    description:
+      "Business website created for a financial services company, showcasing planning, forecasting, and investment services.",
+    type: "Client Project",
+    tech: ["HTML5", "CSS3", "BootStrap", "JavaScript"],
+    image: assetPath("/projects/aims.jpg"),
+    gallery: [
+      assetPath("/projects/aimsfinance/home.png"),
+      assetPath("/projects/aimsfinance/products.png"),
+      assetPath("/projects/aimsfinance/mobile.png"),
+    ],
+    demo: "https://aimsfinance.uk/",
+    github: "https://aimsfinance.uk/",
+  },
+  {
+    slug: "eoscoinvstltd",
+    title: "EOS COINVST LTD",
+    description:
+      "IT services website focused on cybersecurity, cloud solutions, infrastructure management, and analytics.",
+    type: "Client Project",
+    tech: ["HTML5", "CSS3", "BootStrap", "JavaScript"],
+    image: assetPath("/projects/eos.jpg"),
+    gallery: [
+      assetPath("/projects/eos/eos.jpg"),
+      assetPath("/projects/eos/eos1.jpg"),
+      assetPath("/projects/eos/eos1mobile.jpg"),
+      assetPath("/projects/eos/eos2.jpg"),
+      assetPath("/projects/eos/eos2mobile.jpg"),
+      assetPath("/projects/eos/eos3.jpg"),
+      assetPath("/projects/eos/eos3mobile.jpg"),
+      assetPath("/projects/eos/eos4.jpg"),
+      assetPath("/projects/eos/eos4mobile.jpg"),
+      assetPath("/projects/eos/eos5.jpg"),
+      assetPath("/projects/eos/eos5mobile.jpg"),
+      assetPath("/projects/eos/eos6mobilefooter.jpg"),
+      assetPath("/projects/eos/eosfooter.jpg"),
+      assetPath("/projects/eos/eosmobilefooter.jpg"),
+      assetPath("/projects/eos/eosmobilenavbar.jpg"),
+    ],
+    demo: "https://eoscoinvst.uk/",
+    github: "https://eoscoinvst.uk/",
+  },
+  {
+    slug: "reverie",
+    title: "Reverie Restaurant",
+    description:
+      "Professional restaurant website focused on customer experience, menu presentation, and business visibility.",
+    tech: ["Next.js", "Tailwind CSS", "React"],
+    image: assetPath("/projects/restaurant.png"),
+    gallery: [
+      assetPath("/projects/reverie/home.png"),
+      assetPath("/projects/reverie/products.png"),
+      assetPath("/projects/reverie/mobile.png"),
+    ],
+    demo: "https://aymankhairi.github.io/restaurants/",
+    github: "https://github.com/aymankhairi/restaurants",
+  },
+  {
+    slug: "sparkclean",
+    title: "Spark Clean",
+    description:
+      "Modern service website helping customers discover services and request information easily.",
+    tech: ["Next.js", "Tailwind CSS", "React"],
+    image: assetPath("/projects/cleaning.png"),
+    gallery: [
+      assetPath("/projects/sparkclean/home.png"),
+      assetPath("/projects/sparkclean/products.png"),
+      assetPath("/projects/sparkclean/mobile.png"),
+    ],
+    demo: "https://aymankhairi.github.io/sparkclean/",
+    github: "https://github.com/aymankhairi/sparkclean",
+  },
+  {
+    slug: "newlookbarbershop",
+    title: "Barbershop Management System",
+    description:
+      "Full-stack appointment management system with booking workflow, service management, and database integration.",
+    type: "Client Project",
+    tech: [
+      "C#",
+      "ASP.NET Core",
+      "SQL Server",
+      "Entity Framework Core",
+      "HTML5",
+      "CSS3",
+      "Bootstrap",
+    ],
+    image: assetPath("/projects/barber.png"),
+    gallery: [
+      assetPath("/projects/newlook/home.png"),
+      assetPath("/projects/newlook/products.png"),
+      assetPath("/projects/newlook/mobile.png"),
+    ],
+    demo: "https://aymankhairi.github.io/newlook",
+    github: "https://aymankhairi.github.io/newlook",
+  },
+  {
+    slug: "arraf",
+    title: "Arraf Mobile Application",
+    type: "Client Project",
+    description:
+      "Multi-role mobile application with admin, moderator, and user systems with backend integration.",
+    tech: [
+      "Flutter",
+      "Dart",
+      "PHP",
+      "SQL Server",
+      "Firebase",
+      "Firebase Cloud Messaging",
+    ],
+    image: assetPath("/projects/arraf.png"),
+    gallery: [
+      assetPath("/projects/arraf/home.png"),
+      assetPath("/projects/arraf/products.png"),
+      assetPath("/projects/arraf/mobile.png"),
+    ],
+    // demo: "#",
+    // github: "#",
+  },
+];

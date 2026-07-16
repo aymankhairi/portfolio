@@ -1,105 +1,11 @@
 "use client";
+import { projects } from "@/data/projects";
 
 import { assetPath } from "@/lib/path";
 import { motion, Variants } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
-
-const projects = [
-  {
-    title: "Vive E-Commerce",
-    description:
-      "Modern fashion e-commerce platform designed with a responsive shopping experience, product presentation, and clean user interface.",
-    tech: ["Next.js", "React", "CSS"],
-    image: assetPath("/projects/vive.png"),
-    demo: "https://aymankhairi.github.io/vive/",
-    github: "https://github.com/aymankhairi/vive",
-  },
-  {
-    title: "GIM UEMOA LTD Website",
-    description:
-      "Professional e-commerce website developed for a London-based footwear and clothing company.",
-    type: "Client Project",
-    tech: ["HTML5", "CSS3", "BootStrap", "JavaScript"],
-    image: assetPath("/projects/gim.jpg"),
-    demo: "https://gim-uemoa-ltd.uk/",
-    github: "https://gim-uemoa-ltd.uk/",
-  },
-  {
-    title: "AIMS Finance Services",
-    description:
-      "Business website created for a financial services company, showcasing planning, forecasting, and investment services.",
-    type: "Client Project",
-    tech: ["HTML5", "CSS3", "BootStrap", "JavaScript"],
-    image: assetPath("/projects/aims.jpg"),
-    demo: "https://aimsfinance.uk/",
-    github: "https://aimsfinance.uk/",
-  },
-  {
-    title: "EOS COINVST LTD",
-    description:
-      "IT services website focused on cybersecurity, cloud solutions, infrastructure management, and analytics.",
-    type: "Client Project",
-    tech: ["HTML5", "CSS3", "BootStrap", "JavaScript"],
-    image: assetPath("/projects/eos.jpg"),
-    demo: "https://eoscoinvst.uk/",
-    github: "https://eoscoinvst.uk/",
-  },
-  {
-    title: "Restaurant Website",
-    description:
-      "Professional restaurant website focused on customer experience, menu presentation, and business visibility.",
-    tech: ["Next.js", "Tailwind CSS", "React"],
-    image: assetPath("/projects/restaurant.png"),
-    demo: "https://aymankhairi.github.io/restaurants/",
-    github: "https://github.com/aymankhairi/restaurants",
-  },
-  {
-    title: "Cleaning Company Website",
-    description:
-      "Modern service website helping customers discover services and request information easily.",
-    tech: ["Next.js", "Tailwind CSS", "React"],
-    image: assetPath("/projects/cleaning.png"),
-    demo: "https://aymankhairi.github.io/sparkclean/",
-    github: "https://github.com/aymankhairi/sparkclean",
-  },
-  {
-    title: "Barbershop Management System",
-    description:
-      "Full-stack appointment management system with booking workflow, service management, and database integration.",
-    type: "Client Project",
-    tech: [
-      "C#",
-      "ASP.NET Core",
-      "SQL Server",
-      "Entity Framework Core",
-      "HTML5",
-      "CSS3",
-      "Bootstrap",
-    ],
-    image: assetPath("/projects/barber.png"),
-    demo: "https://aymankhairi.github.io/newlook",
-    github: "https://aymankhairi.github.io/newlook",
-  },
-  {
-    title: "Arraf Mobile Application",
-    type: "Client Project",
-    description:
-      "Multi-role mobile application with admin, moderator, and user systems with backend integration.",
-    tech: [
-      "Flutter",
-      "Dart",
-      "PHP",
-      "SQL Server",
-      "Firebase",
-      "Firebase Cloud Messaging",
-    ],
-    image: assetPath("/projects/arraf.png"),
-    // demo: "#",
-    // github: "#",
-  },
-];
 
 export default function Projects() {
   const container: Variants = {
@@ -387,6 +293,25 @@ export default function Projects() {
                   >
                     <FaGithub size={16} />
                     Code
+                  </a>
+                  <a
+                    href={`/gallery/${project.slug}`}
+                    className="
+flex
+items-center
+gap-2
+px-4
+py-2
+rounded-xl
+bg-cyan-500/10
+border
+border-cyan-500/20
+text-cyan-400
+hover:bg-cyan-500/20
+transition-all
+"
+                  >
+                    Gallery
                   </a>
                 </div>
               </div>
