@@ -21,10 +21,6 @@ export default function Navbar() {
       href: "/#education",
     },
     {
-      name: "Gallery",
-      href: "/#gallery",
-    },
-    {
       name: "Contact",
       href: "/#contact",
     },

@@ -271,29 +271,31 @@ export default function Projects() {
                     Demo
                   </a>
 
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-                    flex
-                    items-center
-                    gap-2
-                    px-4
-                    py-2
-                    rounded-xl
-                    border
-                    border-white/10
-                    text-gray-300
-                    hover:border-white/20
-                    hover:text-white
-                    transition-all
-                    duration-300
-                  "
-                  >
-                    <FaGithub size={16} />
-                    Code
-                  </a>
+                  {project.type !== "Client Project" && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+    flex
+    items-center
+    gap-2
+    px-4
+    py-2
+    rounded-xl
+    border
+    border-white/10
+    text-gray-300
+    hover:border-white/20
+    hover:text-white
+    transition-all
+    duration-300
+  "
+                    >
+                      <FaGithub size={16} />
+                      Code
+                    </a>
+                  )}
                   <a
                     href={`/gallery/${project.slug}`}
                     className="
